@@ -1,0 +1,42 @@
+title = "Vincent McLean"
+baseURL = "https://www.vincentmclean.com/"
+theme = "hugo-resume"
+languageCode = "en-us"
+PygmentsCodeFences = true
+PygmentsCodeFencesGuessSyntax = true
+PygmentsStyle = "monokai"
+enableGitInfo = false
+
+[params]
+address = "Charlotte Metro"
+email = "mclean.vincent2@gmail.com"
+favicon = "/favicon.ico"
+firstName = "Vincent"
+lastName = "McLean"
+profileImage = "img/temp_profile.jpg"
+showEducation = true
+showExperience = true
+showCertifications = true
+showOpenSource = false
+showProjects = false
+showPublications = false
+showQr = false
+showSkills = true
+
+[params.google]
+
+
+[[params.handles]]
+link = "https://www.linkedin.com/in/vincent-mclean/"
+name = "LinkedIn"
+
+[[params.handles]]
+link = "https://github.com/vinmclean"
+name = "GitHub"
+
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[taxonomies]
+tag = "tags"

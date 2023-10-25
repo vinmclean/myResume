@@ -1,0 +1,17 @@
+[
+	{
+		"name":"Azure Fundamentals",
+		"description": "Microsoft Certified: Azure Fundamentals",
+		"badge":"https://images.credly.com/size/680x680/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png",
+		"proof":"https://www.credly.com/badges/7dd9bc6c-3a2b-4f9e-adde-7cb9bc162b5c/public_url"
+
+	},
+	{
+		"name":"Java SE 7 Programmer",
+		"description": "Oracle Certified Associate, Java SE 7 Programmer",
+		"badge":"https://images.credly.com/size/680x680/images/9956323d-90eb-4a7a-9fc6-4750ce433d3a/Oracle-Certification-badge_OC-Associate600X600.png",
+		"proof":"https://www.credly.com/badges/58afdbf2-e989-4521-a1a9-de13fdcb693f/public_url"
+
+	}
+	
+]

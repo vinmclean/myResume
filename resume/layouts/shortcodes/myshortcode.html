@@ -1,0 +1,19 @@
+<p>Page Visits: <a id="myCount"></a></p>
+
+<script>
+    fetch('https://visitorcounterfunc.azurewebsites.net/api/HttpTrigger1_visitorCounter?')
+    .then(Response => {
+        return Response.json();
+    })
+    .then(data => {
+        console.log("Processed a request")
+        console.log("Data count:" + data.count);
+        counter = data;
+        document.getElementById("myCount").innerHTML = counter.count;
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+
+
+</script>

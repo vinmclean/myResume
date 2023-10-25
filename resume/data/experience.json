@@ -1,0 +1,33 @@
+[
+    {
+        "role": "Senior Systems Operations Engineer",
+        "company": "Wells Fargo Securities",
+        "summary": "\n- Lead team to meet technical deliverables while leveraging solid understanding of technical process controls/standards.\n- Contribute to increasing system efficiencies and lowering human intervention time on related tasks. \n- Collaborate with vendors and other technical personnel to resolve technical issues and achieve highest levels of systems and infrastructure availability.\n- Review and analyze moderately complex operational support systems, application software and system management tools to ensure the highest levels of systems and infrastructure availability.",
+        "range": "August 2022 - Present"
+    },
+    {
+        "role":"Senior Infrastructure Engineer",
+        "company":"Wells Fargo Advisors",
+        "summary":"\n- Served as Subject Matter Expert. Responsible for improving performance and application availability monitoring practices.\n- Performed Root Cause Analysis with Software Engineers, Operation Engineers, and Business Analysts to determine accurate root cause and resolutions of Production issues/outages. \n- Managed the execution, provide in-depth documentation, and analysis of Disaster Recovery events. Ensured we met our recovery SLA. \n- Coordinated with various teams across the application stack to plan version upgrades and capacity planning and scaling. \n- Proactively monitored the performance and availability of 4 IBM BPM/BAW Production applications via AppDynamics and Splunk monitoring tools. \n- Lead my team in the adoption of Jira Service Desk. This streamlined how our customers contacted us for assistance and provided seamless way to track incoming issues/service request, daily tasks, and technical debt. \n- Created Jira Service Desk dashboard for management. This allowed management to accurately access the team’s workload and performance. \n- Developed effective Production AppDynamics dashboards and health alerts, leveraged by Level 1 Production Support team to assist in application availability and performance monitoring.",
+        "range":"February 2019 - August 2022"
+    },
+    {
+        "role":"Applications Systems Engineer",
+        "company":"Wells Fargo Advisors",
+        "summary":"\n- Maintained 32 non-prod and prod clustered IBM WebSphere Application Server environments. \n- Worked diligently with IBM support to resolve incidents and find effective solutions. \n- Effectively worked with DBA, Software Engineers, Middleware Engineers, and third-party support vendors to remediate application outages and environment issues within the IBM BPM/BAW platform. \n- Troubleshoot JVM start-up issues, application deployment defects after deployment, and environment issues by analyzing JVM logs, plugin logs, and web-server logs. \n- Automate server management by creating bash scripts to perform JVM health checks, stop, start, restart, and sync. \n- Developed effective Splunk search queries and alerts that aided in error detection, and performance and availability monitoring of IBM BPM/BAW platform. \n- Developed Splunk dashboards for 32 bpm environments. Dashboard assisted Application Development teams, Level 1 Production Support teams, and Infrastructure Support teams to resolve and remediate Production and non-production environment issues and outages.",
+        "range":"April 2017 - February 2019"
+    },
+    {
+        "role":"Systems QA Analyst",
+        "company":"Wells Fargo Securities",
+        "summary":"\n- Conducted monthly regression and functional testing for Calypso Interest Rate and Derivates Trading Platform production deployments. \n- Conducted functional testing for Gateway, a service application that provides Calypso trade and market data to various clients. \n- Collaborate with team members and software developers to create effective test cases for regression and functional testing. \n- Document detailed standard operating procedures for Production Support and team members. \n- Effectively monitored software defects related to Calypso and Gateway application, to ensure they were resolved and closed within the sprint. \n- Perform release validation with Calypso Support and assisted with code deployment to Calypso Production environment.",
+        "range":"June 2012 - April 2017"
+    },
+
+    {
+        "role":"IT Services Intern",
+        "company":"Deloitte Service LP",
+        "summary":"\n- Analyzed user needs and software requirements for Oracle Business Intelligence Enterprise (OBIEE) reporting tool. \n- Designed and developed a mockup dashboard which represented a clean and slick version of the reporting tool using Oracle Business Intelligence Enterprise (OBIEE) software. \n- Conducted interviews with the Chancellor and Deans of the schools and colleges of North Carolina A&T State Univ. to understand their needs and requirements for improving current reporting process. \n- Assisted analysts in creating efficient reporting solutions.",
+        "range":"June 2011 - July 2011"
+    }
+]

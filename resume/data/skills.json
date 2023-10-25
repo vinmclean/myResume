@@ -1,0 +1,11 @@
+[
+  {
+      "grouping":"PROFICIENT IN",
+      "skills":[ "Splunk \n","AppDynamics \n","Linux \n","Windows \n","ServiceNow \n","JIRA \n"]
+  },
+  {
+      "grouping":"KNOWLEDGABLE ABOUT",
+      "skills":[ "ITRS Geneos Monitoring\n","Oracle Database \n","Microsoft SQL Server \n","Autosys \n","Programming/Scripting: Java, Python, Bash \n","CI/CD: Git, GitHub, GitHub Actions, Azure DevOps \n","Serverless Technology: Docker, Microsoft Azure, Terraform, Kubernetes \n"]
+  }
+  
+]
