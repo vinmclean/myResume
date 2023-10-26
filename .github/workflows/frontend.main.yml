@@ -4,9 +4,10 @@ name: Deploy myresume site via Hugo
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-    paths:
-      - "resume/**"
+    branches: 
+        - main
+    #paths:
+     # - "resume/**"
 
 jobs:
   # Build job
@@ -31,6 +32,7 @@ jobs:
           cd resume
           rm -rf public
           cd themes
+          rm -rf *
           git clone https://github.com/vinmclean/hugo-resume.git
           cd ..
           hugo
