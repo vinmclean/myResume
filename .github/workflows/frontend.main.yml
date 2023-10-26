@@ -1,0 +1,56 @@
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Deploy myresume site via Hugo
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+    paths:
+      - "resume/**"
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.109.0"
+
+      - name: Git Checkout
+        uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{secrets.AZURE_CREDENTIALS}}
+
+      - name: Build my resume hugo static site
+        run: |
+          cd resume
+          rm -rf public
+          cd themes
+          git clone https://github.com/vinmclean/hugo-resume.git
+          cd ..
+          hugo
+          ls -l public/
+
+      - name: Upload to blob storage
+        uses: azure/CLI@v1
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az storage blob upload-batch --overwrite true --account-name storagecrchallenge --connection-string "${{secrets.AZURE_STORAGE_CONNECTION_STRING}}" -d '$web' -s ${{github.workspace}}/resume/public
+
+      - name: Azure Purge CDN Endpoint
+        uses: azure/CLI@v1
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az cdn endpoint purge --no-wait --content-paths "/*" --profile-name "cdb-profile-vince" --name "cdn-vincent-static-resume" --resource-group "cloudResumeChallenge"
+
+      - name: logout
+        run: |
+          az logout
+        if: always()
