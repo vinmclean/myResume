@@ -1,11 +1,23 @@
 [
   {
-      "grouping":"PROFICIENT IN",
-      "skills":[ "Splunk \n","AppDynamics \n","Linux \n","Windows \n","ServiceNow \n","JIRA \n"]
+      "grouping":"Cloud Platforms",
+      "skills":[ "Microsoft Azure (Certified: Azure Developer Associate, Azure Fundamentals)\n","Amazon Web Services \n"]
   },
   {
-      "grouping":"KNOWLEDGABLE ABOUT",
-      "skills":[ "ITRS Geneos Monitoring\n","Oracle Database \n","Microsoft SQL Server \n","Autosys \n","Programming/Scripting: Java, Python, Bash \n","CI/CD: Git, GitHub, GitHub Actions, Azure DevOps \n","Serverless Technology: Docker, Microsoft Azure, Terraform, Kubernetes \n"]
-  }
+      "grouping":"Programming",
+      "skills":[ "Python\n","Java \n","BASH \n"]
+  },
+  {
+      "grouping":"Tools",
+      "skills":[ "Git/GitHub \n","Terraform \n", "Splunk \n", "AppDynamics \n", "ITRS/Geneos \n", "Linux Server \n", "Windows Server \n", "ServiceNow \n", "Jira \n", "AutoSys \n"]
+  },
+  {
+      "grouping":"Database",
+      "skills":[ "Oracle\n","Microsoft SQL Server \n"]
+  },
+  {
+      "grouping":"CI/CD",
+      "skills":[ "GitHub Actions"]
+}
   
 ]

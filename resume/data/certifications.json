@@ -1,5 +1,12 @@
 [
 	{
+		"name":"Azure Developer Associate",
+		"description": "Microsoft Certified: Azure Developer Associate",
+		"badge":"https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main",
+		"proof":"https://learn.microsoft.com/api/credentials/share/en-us/VincentMcLean-1570/31BC6C038C1E681E?sharingId=E3261FD18D6DB626"
+
+	},
+	{
 		"name":"Azure Fundamentals",
 		"description": "Microsoft Certified: Azure Fundamentals",
 		"badge":"https://images.credly.com/size/680x680/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png",

@@ -1,8 +1,8 @@
 [
     {
-        "role": "Senior Systems Operations Engineer",
+        "role": "Senior Specialty Systems Operations Engineer",
         "company": "Wells Fargo Securities",
-        "summary": "\n- Lead team to meet technical deliverables while leveraging solid understanding of technical process controls/standards.\n- Contribute to increasing system efficiencies and lowering human intervention time on related tasks. \n- Collaborate with vendors and other technical personnel to resolve technical issues and achieve highest levels of systems and infrastructure availability.\n- Review and analyze moderately complex operational support systems, application software and system management tools to ensure the highest levels of systems and infrastructure availability.",
+        "summary": "\n- Developed and implemented a comprehensive monitoring solution using ITRS/Geneos to track internal ETL/batch processes, server processes on Windows/Linux, and database statistics, ensuring optimal system performance and rapid issue detection.\n- Collaborated closely with software developers and database administrators (DBAs) to resolve technical issues, enhancing system reliability and performance. \n- Utilized ServiceNow for effective incident management, change requests, and addressing day-to-day user requests, maintaining high service standards and user satisfaction. \n- Assisted with infrastructure updates, addressing vulnerabilities, technology refreshes, and migrating applications to new hardware to ensure system security and up-to-date technology stack. \n- Provided robust support for all production deployments, ensuring smooth transitions and minimal downtime. \n- Planned and coordinated disaster recovery events for applications, ensuring business continuity and adherence to recovery SLAs. \n- Utilized Terraform to apply infrastructure changes for a web application hosted on Azure cloud, ensuring efficient and reliable cloud infrastructure management.",
         "range": "August 2022 - Present"
     },
     {
