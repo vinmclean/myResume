@@ -13,3 +13,5 @@ outputs:
 Versatile and driven IT professional with 11+ years of experience in the Financial Tech Industry, aspiring to excel as a Cloud Engineer, DevOps Engineer, or Software Engineer. Proven ability to adapt swiftly to new technologies and leverage them to optimize operations and drive organizational growth. Thrives in high-pressure environments, demonstrating exceptional problem-solving and troubleshooting skills. A self-motivated team player who also excels in both collaborative team environments and independent work settings. Committed to fostering a culture of continuous learning and professional growth...
 
 {{<myshortcode>}}
+
+[Download my resume](docs/VMcLean_resume.docx)
