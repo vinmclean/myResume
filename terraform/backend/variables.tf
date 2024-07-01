@@ -27,8 +27,7 @@ variable "cosmosdb_database_name" {
 variable "cosmosdb_connection_string" {
   description = "The connection string of the cosmosdb account"
   type        = string
-  sensitive = true
-  
+  sensitive   = true
 }
 
 variable "function_app_name" {
