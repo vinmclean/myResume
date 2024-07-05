@@ -55,9 +55,9 @@ resource "azurerm_service_plan" "app_plan" {
   os_type  = "Linux"
 }
 
-resource "azurerm_linux_function_app" "function_app" {
+resource "azurerm_linux_function_app" "py_func_app" {
   name                       = var.function_app_name
-  location                   = "eastus"
+  location                   = var.location
   resource_group_name        = azurerm_resource_group.fun_app_rg.name
   service_plan_id            = azurerm_service_plan.app_plan.id
   storage_account_name       = azurerm_storage_account.func_app_storage_account.name
@@ -68,55 +68,12 @@ resource "azurerm_linux_function_app" "function_app" {
     "APPLICATIONINSIGHTS_CONNECTION_STRING" = "InstrumentationKey=74c873fd-0b5a-4938-bab7-2d39d91e62d1;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/"
     "AzureCosmosDBConnectionString"         = var.cosmosdb_connection_string
     "ENABLE_ORYX_BUILD"                     = "1"
+    "AzureWebJobsFeatureFlags"              = "EnableWorkerIndexing"
     "FUNCTIONS_WORKER_RUNTIME"              = "python"
     "SCM_DO_BUILD_DURING_DEPLOYMENT"        = "1"
   }
 
-
-  https_only = true
-
-
-
-  tags = {
-    "hidden-link: /app-insights-conn-string"         = "InstrumentationKey=74c873fd-0b5a-4938-bab7-2d39d91e62d1;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/"
-    "hidden-link: /app-insights-instrumentation-key" = "74c873fd-0b5a-4938-bab7-2d39d91e62d1"
-    "hidden-link: /app-insights-resource-id"         = "/subscriptions/5e34105e-5c80-4a2c-92e9-6e92450e588a/resourceGroups/rgMyResume/providers/microsoft.insights/components/VincentResumeProject"
-  }
-
-
-
-  auth_settings {
-
-    allowed_external_redirect_urls = []
-    default_provider               = null
-    enabled                        = false
-    issuer                         = null
-    runtime_version                = null
-    token_refresh_extension_hours  = 0
-    token_store_enabled            = false
-    unauthenticated_client_action  = null
-  }
-
   site_config {
-    always_on       = false
-    app_scale_limit = 200
-
-    elastic_instance_minimum = 0
-    ftps_state               = "FtpsOnly"
-    health_check_path        = null
-    http2_enabled            = false
-
-
-
-    pre_warmed_instance_count        = 0
-    runtime_scale_monitoring_enabled = false
-
-
-    scm_use_main_ip_restriction = false
-
-    vnet_route_all_enabled = false
-    websockets_enabled     = false
-
     cors {
       allowed_origins = [
         "https://portal.azure.com",
