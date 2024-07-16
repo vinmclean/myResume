@@ -58,6 +58,13 @@ resource "azurerm_service_plan" "app_plan" {
   os_type             = "Linux"
 }
 
+resource "azurerm_application_insights" "app_insights" {
+  name                = "appinsights-${var.azure_linux_function_app.py_func_app.name}"
+  location            = azurerm_linux_function_app.py_func_app.location
+  resource_group_name = azurerm_linux_function_app.py_func_app.resource_group_name.name
+  application_type    = "other"
+}
+
 resource "azurerm_linux_function_app" "py_func_app" {
   name                       = "${var.function_app_name}-${random_string.random.result}"
   location                   = var.location
@@ -65,8 +72,11 @@ resource "azurerm_linux_function_app" "py_func_app" {
   service_plan_id            = azurerm_service_plan.app_plan.id
   storage_account_name       = azurerm_storage_account.func_app_storage_account.name
   storage_account_access_key = azurerm_storage_account.func_app_storage_account.primary_access_key
+  https_only                 = true
 
   site_config {
+    application_insights_key = azurerm_application_insights.app_insights.instrumentation_key
+    application_insights_connection_string = azurerm_application_insights.app_insights.connection_string
 
     cors {
       allowed_origins = [
@@ -75,11 +85,13 @@ resource "azurerm_linux_function_app" "py_func_app" {
       ]
       support_credentials = true
     }
+    application_stack {
+        python_version = "3.11"
+      }
   }
 
   app_settings = {
-    "FUNCTIONS_WORKER_RUNTIME"      = "python"
-    "FUNCTIONS_EXTENSION_VERSION"   = "~4" # Specify the Functions runtime version
     "AzureCosmosDBConnectionString" = var.cosmosdb_connection_string
   }
+  
 }
