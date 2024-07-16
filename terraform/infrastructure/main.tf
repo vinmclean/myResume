@@ -59,9 +59,9 @@ resource "azurerm_service_plan" "app_plan" {
 }
 
 resource "azurerm_application_insights" "app_insights" {
-  name                = "appinsights-${var.azure_linux_function_app.py_func_app.name}"
-  location            = azurerm_linux_function_app.py_func_app.location
-  resource_group_name = azurerm_linux_function_app.py_func_app.resource_group_name.name
+  name                = "appinsights-azure_linux_function_app.py_func_app.name"
+  location            = var.location
+  resource_group_name = azurerm_resource_group.fun_app_rg.name
   application_type    = "other"
 }
 
@@ -75,7 +75,7 @@ resource "azurerm_linux_function_app" "py_func_app" {
   https_only                 = true
 
   site_config {
-    application_insights_key = azurerm_application_insights.app_insights.instrumentation_key
+    application_insights_key               = azurerm_application_insights.app_insights.instrumentation_key
     application_insights_connection_string = azurerm_application_insights.app_insights.connection_string
 
     cors {
@@ -86,12 +86,12 @@ resource "azurerm_linux_function_app" "py_func_app" {
       support_credentials = true
     }
     application_stack {
-        python_version = "3.11"
-      }
+      python_version = "3.11"
+    }
   }
 
   app_settings = {
     "AzureCosmosDBConnectionString" = var.cosmosdb_connection_string
   }
-  
+
 }
